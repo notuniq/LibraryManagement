@@ -100,6 +100,42 @@ const bookController = {
             res.status(500).json({ message: 'Internal server error' });
         }
     },
+
+    // Поиск книги по названию и/или автору
+    searchBooks: async (req, res) => {
+        try {
+            // Получаем параметры поиска из запроса
+            const { title, author } = req.query;
+
+            // Создаем объект для фильтрации поиска
+            const filter = {};
+
+            // Если указано название книги, добавляем его в фильтр
+            if (title) {
+                filter.title = { $regex: new RegExp(title, 'i') }; // Игнорируем регистр
+            }
+
+            // Если указан автор книги, добавляем его в фильтр
+            if (author) {
+                filter.author = { $regex: new RegExp(author, 'i') }; // Игнорируем регистр
+            }
+
+            // Ищем книги в базе данных с учетом заданных фильтров
+            const books = await Book.find(filter);
+
+            // Проверяем, были ли найдены книги
+            if (books.length === 0) {
+                return res.status(404).json({ message: 'No books found' });
+            }
+
+            // Отправляем список найденных книг в ответ
+            res.json(books);
+        } catch (err) {
+            // Если произошла ошибка, отправляем статус 500 и сообщение об ошибке
+            console.error(err);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    },
 };
 
 // Экспортируем контроллер
