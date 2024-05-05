@@ -66,8 +66,10 @@ body {
 }
 
 #loader {
-    border: 8px solid #f3f3f3; /* Цвет круга загрузки */
-    border-top: 8px solid #3498db; /* Цвет круга загрузки */
+    border: 8px solid #f3f3f3;
+    /* Цвет круга загрузки */
+    border-top: 8px solid #3498db;
+    /* Цвет круга загрузки */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -75,8 +77,13 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Скрываем прелоадер после загрузки страницы */
@@ -87,22 +94,28 @@ body {
 
 #books-list {
     margin: auto 0;
-    width: 100%; /* Задаем ширину контейнера */
+    width: 100%;
+    /* Задаем ширину контейнера */
     display: flex;
-    flex-wrap: nowrap; /* Запрещаем перенос элементов на новую строку */
+    flex-wrap: nowrap;
+    /* Запрещаем перенос элементов на новую строку */
     justify-content: flex-start;
-    overflow-x: auto; /* Добавляем горизонтальную прокрутку */
-    -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на мобильных устройствах */
+    overflow-x: auto;
+    /* Добавляем горизонтальную прокрутку */
+    -webkit-overflow-scrolling: touch;
+    /* Для плавной прокрутки на мобильных устройствах */
 }
 
 
 #books-list::-webkit-scrollbar {
-    display: none; /* Скрываем полосу прокрутки вебкит-браузеров */
+    display: none;
+    /* Скрываем полосу прокрутки вебкит-браузеров */
 }
 
 
 /* Стили для отдельной книги */
 .book {
+    text-decoration: none;
     margin: 20px;
     width: 177px;
 }
@@ -123,39 +136,51 @@ body {
 
 .book p {
     color: #302119;
-    margin: 5px 0; /* Уменьшаем внешние отступы для абзацев внутри блока книги */
+    margin: 5px 0;
+    /* Уменьшаем внешние отступы для абзацев внутри блока книги */
 }
 
 .books-heading-main {
     margin-left: 20px;
     color: #302119;
-    text-align: left; /* Выравниваем по центру */
-    margin-top: 100px; /* Отступ сверху */
+    text-align: left;
+    /* Выравниваем по центру */
+    margin-top: 100px;
+    /* Отступ сверху */
 }
 
 .books-heading {
     color: #302119;
     margin-left: 20px;
-    text-align: left; /* Выравниваем по центру */
-    margin-top: 20px; /* Отступ сверху */
+    text-align: left;
+    /* Выравниваем по центру */
+    margin-top: 20px;
+    /* Отступ сверху */
 }
 
 #main-footer {
-    padding: 20px; /* Внутренние отступы */
+    padding: 20px;
+    /* Внутренние отступы */
     background-color: #ffffff;
     color: #374957;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 #main-footer p {
-    margin: 0; /* Убираем отступы */
+    margin: 0;
+    /* Убираем отступы */
 }
 
 .nav-right a {
     text-decoration: none;
     color: #302119;
     text-underline: #302119;
+    margin-right: 30px;
 }
 
 
@@ -178,4 +203,129 @@ body {
 
 .add-book-button:hover {
     background-color: #302119;
+}
+
+.no-books-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+.no-books-message svg {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.no-books-message p {
+    margin: 0;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 2, 0.84);
+}
+
+.modal-content {
+    color: white;
+    background-color: rgb(35, 34, 34);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #3b3b3b;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content form label {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.modal-content form input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-content form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.modal-content form label.required::after {
+    content: "*";
+    /* Добавляем красную звездочку после обязательных полей */
+    color: red;
+}
+
+.modal-content form .button {
+    margin-top: 30px;
+    /* Помещаем кнопку в самый низ */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content form .button:hover {
+    background-color: #45a049;
+    color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.close {
+    color: #aaa;
+    text-align: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.modal-content select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Стили для опций выпадающего списка */
+.modal-content select option {
+    padding: 5px;
 }

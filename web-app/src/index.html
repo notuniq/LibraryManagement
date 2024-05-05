@@ -5,22 +5,25 @@
   <meta charset="UTF-8">
   <title>Library Management App</title>
   <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <header id="main-header">
   <nav class="desktop-nav">
     <div class="nav-left">
-      <svg fill="#302119" height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.5 487.5" xml:space="preserve">
+      <svg fill="#302119" height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.5 487.5" xml:space="preserve">
         <g>
           <g>
             <path d="M437,12.3C437,5.5,431.5,0,424.7,0H126.3C84.4,0,50.4,34.1,50.4,75.9v335.7c0,41.9,34.1,75.9,75.9,75.9h298.5
               c6.8,0,12.3-5.5,12.3-12.3V139.6c0-6.8-5.5-12.3-12.3-12.3H126.3c-28.3,0-51.4-23.1-51.4-51.4S98,24.5,126.3,24.5h298.5
               C431.5,24.5,437,19,437,12.3z M126.3,151.8h286.2V463H126.3c-28.3,0-51.4-23.1-51.4-51.4V131.7
-              C88.4,144.2,106.5,151.8,126.3,151.8z"/>
-            <path d="M130.5,64.8c-6.8,0-12.3,5.5-12.3,12.3s5.5,12.3,12.3,12.3h280.1c6.8,0,12.3-5.5,12.3-12.3s-5.5-12.3-12.3-12.3H130.5z"/>
+              C88.4,144.2,106.5,151.8,126.3,151.8z" />
+            <path
+              d="M130.5,64.8c-6.8,0-12.3,5.5-12.3,12.3s5.5,12.3,12.3,12.3h280.1c6.8,0,12.3-5.5,12.3-12.3s-5.5-12.3-12.3-12.3H130.5z" />
             <path d="M178,397.7c6.3,2.4,13.4-0.7,15.8-7.1l17.9-46.8h62.7c0.5,0,0.9-0.1,1.3-0.1l17.9,46.9c1.9,4.9,6.5,7.9,11.4,7.9
               c1.5,0,2.9-0.3,4.4-0.8c6.3-2.4,9.5-9.5,7.1-15.8l-54-141.2c-3-7.9-10.4-13-18.8-13c-8.4,0-15.8,5.1-18.8,13l-54,141.2
-              C168.5,388.2,171.7,395.2,178,397.7z M243.7,260l22.7,59.3h-45.3L243.7,260z"/>
+              C168.5,388.2,171.7,395.2,178,397.7z M243.7,260l22.7,59.3h-45.3L243.7,260z" />
           </g>
         </g>
       </svg>
@@ -33,356 +36,94 @@
 </header>
 
 <body>
-<!--<div id="preloader">-->
-<!--  <div id="loader"></div>-->
-<!--</div>-->
+  <div id="preloader">
+    <div id="loader"></div>
+  </div>
 
-<div class="center-content" style="margin-top: 100px">
-  <svg width="150px" height="150px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet"><path d="M57.063 20.218l1.029-1.698s.906-1.502.906-3.519c0-4.886-4.662-4.757-4.662-4.757L44.179 7.479L38.638 2l-7.291 1.985l-2.391-.651l-1.817 1.797l-10.497 2.858s-4.04-.111-4.04 4.123c0 1.748.786 3.05.786 3.05l1.351 2.23l-1.187 1.172l-5.86 1.596s-4.662-.129-4.662 4.757a7.56 7.56 0 0 0 .779 3.281L2 29.987l.949.376c.021.051.029.108.07.149c1.835 1.839 1.684 4.309 1.422 5.643l-1.109 1.111l8.401 4.039L23.271 60.35c1.849 2.906 5.774 1.088 5.774 1.088l29.649-14.256l-1.109-1.111c-.262-1.334-.413-3.804 1.422-5.644c.041-.041.049-.098.07-.148l.949-.377l-5.513-5.45l6.33-3.043l-.961-.963c-.227-1.156-.358-3.297 1.233-4.891c.035-.036.041-.084.06-.129l.825-.327l-4.937-4.881m-5.685-8.835l-1.25 1.978l-3.234-3.198l4.484 1.22M39.176 7.144l4.643 4.963l-16.789 6.067l-3.965-6.156l16.111-4.874M15.744 19.052l11.457 18.911l-21.827-8.658l10.37-10.253m-4.775 2.067l-1.345 1.33l-.538-.825l1.883-.505m-4.247 1.034l1.252 1.927l-2.713 2.682a5.586 5.586 0 0 1-.331-1.845c0-1.826.906-2.521 1.792-2.764M5.154 37.026l.015-.058l25.147 11.007l-24.95-11.894c.023-.135.041-.284.06-.434l19.533 8.18l-19.465-9.116a7.723 7.723 0 0 0-.086-1.245l18.079 7.445L5.165 32.4a6.048 6.048 0 0 0-.47-1.137l24.883 10.625l.566.934c1.167 1.834 3.284 1.495 4.351 1.177c1.475.728 4.119 2.412 3.442 4.893c-.357 1.312-1.142 1.948-2.399 1.948c-1.273 0-2.544-.666-2.557-.675L5.154 37.026M30.2 50.185l-1.966.814l-1.67-2.563l3.636 1.749m-7.614 5.381l-7.729-12.759l7.682 3.693l3.633 5.592c-1.465.626-3.102 2.055-3.586 3.474m34.033-12.184a7.731 7.731 0 0 0-.086 1.245l-19.465 9.116l19.533-8.18c.019.149.036.299.06.434l-24.95 11.895l25.147-11.007a.982.982 0 0 1 .015.058L29.046 60.08c-.013.009-1.282.675-2.557.675c-1.258 0-2.042-.637-2.399-1.948c-.918-3.367 4.302-5.276 4.38-5.305l4.575-1.952c.491.209 3.994 1.584 5.711-1.115l1.083-1.786l17.494-7.47a6.12 6.12 0 0 0-.471 1.137L38.54 50.827l18.079-7.445m.034-4.161l-14.825 6.144l4.114-6.791l6.767-3.253l3.944 3.9m2.393-11.107a6.9 6.9 0 0 0-.075 1.079l-16.868 7.9l16.928-7.089c.017.129.031.26.052.376L37.459 40.688l21.794-9.539a.46.46 0 0 1 .013.05L35.149 42.586c-.011.007-1.112.585-2.216.585c-1.091 0-1.77-.553-2.079-1.689c-.796-2.918 3.728-4.572 3.796-4.597l25.014-10.68a5.268 5.268 0 0 0-.407.986l-15.88 7.376l15.669-6.453" fill="#302119"></path></svg>
-  <button class="add-book-button">Добавить книгу</button>
-</div>
-<div class="books-heading-main">
-  <h1>Все книги</h1>
-</div>
-<div id="books-list">
-  <!-- Блок для списка книг -->
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Что будем искать</h2>
+      <form>
+        <label for="name" class="required">Название</label>
+        <input type="text" id="name" name="name" required>
+        <label for="author" class="required">Автор</label>
+        <input type="text" id="author" name="author" required>
+        <label for="avatar">Обложка</label>
+        <input type="text" id="avatar" name="avatar">
+        <label for="genre" class="required">Жанр</label>
+        <select id="genre" name="genre" required>
+          <option value="Фантастика">Фантастика</option>
+          <option value="Детектив">Детектив</option>
+          <option value="Роман">Роман</option>
+          <!-- Добавьте здесь другие предложенные жанры -->
+        </select>
+        <label for="genre2">Свой жанр</label>
+        <input type="text" id="genre2" name="genre2">
+        <button type="button" id="addItem" class="button">Добавить книгу</button>
+      </form>
+    </div>
   </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
+
+
+
+  <div class="center-content" style="margin-top: 100px">
+    <svg width="150px" height="150px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+      class="iconify iconify--emojione-monotone" preserveAspectRatio="xMidYMid meet">
+      <path
+        d="M57.063 20.218l1.029-1.698s.906-1.502.906-3.519c0-4.886-4.662-4.757-4.662-4.757L44.179 7.479L38.638 2l-7.291 1.985l-2.391-.651l-1.817 1.797l-10.497 2.858s-4.04-.111-4.04 4.123c0 1.748.786 3.05.786 3.05l1.351 2.23l-1.187 1.172l-5.86 1.596s-4.662-.129-4.662 4.757a7.56 7.56 0 0 0 .779 3.281L2 29.987l.949.376c.021.051.029.108.07.149c1.835 1.839 1.684 4.309 1.422 5.643l-1.109 1.111l8.401 4.039L23.271 60.35c1.849 2.906 5.774 1.088 5.774 1.088l29.649-14.256l-1.109-1.111c-.262-1.334-.413-3.804 1.422-5.644c.041-.041.049-.098.07-.148l.949-.377l-5.513-5.45l6.33-3.043l-.961-.963c-.227-1.156-.358-3.297 1.233-4.891c.035-.036.041-.084.06-.129l.825-.327l-4.937-4.881m-5.685-8.835l-1.25 1.978l-3.234-3.198l4.484 1.22M39.176 7.144l4.643 4.963l-16.789 6.067l-3.965-6.156l16.111-4.874M15.744 19.052l11.457 18.911l-21.827-8.658l10.37-10.253m-4.775 2.067l-1.345 1.33l-.538-.825l1.883-.505m-4.247 1.034l1.252 1.927l-2.713 2.682a5.586 5.586 0 0 1-.331-1.845c0-1.826.906-2.521 1.792-2.764M5.154 37.026l.015-.058l25.147 11.007l-24.95-11.894c.023-.135.041-.284.06-.434l19.533 8.18l-19.465-9.116a7.723 7.723 0 0 0-.086-1.245l18.079 7.445L5.165 32.4a6.048 6.048 0 0 0-.47-1.137l24.883 10.625l.566.934c1.167 1.834 3.284 1.495 4.351 1.177c1.475.728 4.119 2.412 3.442 4.893c-.357 1.312-1.142 1.948-2.399 1.948c-1.273 0-2.544-.666-2.557-.675L5.154 37.026M30.2 50.185l-1.966.814l-1.67-2.563l3.636 1.749m-7.614 5.381l-7.729-12.759l7.682 3.693l3.633 5.592c-1.465.626-3.102 2.055-3.586 3.474m34.033-12.184a7.731 7.731 0 0 0-.086 1.245l-19.465 9.116l19.533-8.18c.019.149.036.299.06.434l-24.95 11.895l25.147-11.007a.982.982 0 0 1 .015.058L29.046 60.08c-.013.009-1.282.675-2.557.675c-1.258 0-2.042-.637-2.399-1.948c-.918-3.367 4.302-5.276 4.38-5.305l4.575-1.952c.491.209 3.994 1.584 5.711-1.115l1.083-1.786l17.494-7.47a6.12 6.12 0 0 0-.471 1.137L38.54 50.827l18.079-7.445m.034-4.161l-14.825 6.144l4.114-6.791l6.767-3.253l3.944 3.9m2.393-11.107a6.9 6.9 0 0 0-.075 1.079l-16.868 7.9l16.928-7.089c.017.129.031.26.052.376L37.459 40.688l21.794-9.539a.46.46 0 0 1 .013.05L35.149 42.586c-.011.007-1.112.585-2.216.585c-1.091 0-1.77-.553-2.079-1.689c-.796-2.918 3.728-4.572 3.796-4.597l25.014-10.68a5.268 5.268 0 0 0-.407.986l-15.88 7.376l15.669-6.453"
+        fill="#302119"></path>
+    </svg>
+    <button class="add-book-button" id="add-book-btn">Добавить книгу</button>
   </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
+  <div class="books-heading-main">
+    <h1>Все книги</h1>
   </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
+  <div class="no-books-message" id="no-books">
+    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M19.6586 15.493L13.8426 6.04498C13.4589 5.39724 12.762 5 12.0091 5C11.2563 5 10.5593 5.39724 10.1756 6.04498L4.35861 15.493C3.91876 16.1817 3.88094 17.0531 4.25947 17.7773C4.63801 18.5016 5.37505 18.968 6.19161 19H17.8256C18.6422 18.968 19.3792 18.5016 19.7577 17.7773C20.1363 17.0531 20.0985 16.1817 19.6586 15.493Z"
+        stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M12.0086 13V8" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M12.0086 16V15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+    <p id="no-books-text">Книги не найдены</p>
   </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
+  <div id="books-list">
+    <!-- Блок для списка книг -->
+    <!-- <div class="book">
+      <img
+        src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7"
+        alt="Book 1" width="177" height="247">
+      <p class="book-author">Кир Булычев</p>
+      <p class="book-title">Можно попросить Нику?</p>
+    </div> -->
   </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-</div>
-<div class="books-heading">
-  <h1>Из мира фантастики</h1>
-</div>
-<div id="books-list">
-  <!-- Блок для списка книг -->
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-</div>
-<div class="books-heading">
-  <h1>Биографии</h1>
-</div>
-<div id="books-list">
-  <!-- Блок для списка книг -->
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-</div>
-<div class="books-heading">
-  <h1>Романы</h1>
-</div>
-<div id="books-list">
-  <!-- Блок для списка книг -->
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-  <div class="book">
-    <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7" alt="Book 1" width="177" height="247">
-    <p class="book-author">Кир Булычев</p>
-    <p class="book-title">Можно попросить Нику?</p>
-  </div>
-</div>
+
+  <!--  <footer id="main-footer">-->
+  <!--    <nav class="desktop-nav">-->
+  <!--      <div class="nav-left" style="color: #302119;">-->
+  <!--        <svg width="40px" height="40px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+  <!--          xmlns:xlink="http://www.w3.org/1999/xlink">-->
+  <!--          <g id="Page-1" stroke="none" stroke-width="1" fill="#302119" fill-rule="evenodd">-->
+  <!--            <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000">-->
+  <!--              <g id="icons" transform="translate(56.000000, 160.000000)">-->
+  <!--                <path-->
+  <!--                  d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"-->
+  <!--                  id="github-[#142]"></path>-->
+  <!--                </g>-->
+  <!--            </g>-->
+  <!--          </g>-->
+  <!--        </svg>-->
+  <!--        <p style="margin-left: 10px; margin-top: 5px">Coded by unibtw</p>-->
+  <!--      </div>-->
+  <!--      <div class="nav-right">-->
+  <!--        <a href="https://github.com/unibtw/LibraryManagement">Source Code</a>-->
+  <!--      </div>-->
+  <!--    </nav>-->
+  <!--  </footer>-->
+  <script src="scripts/modal.js"></script>
 </body>
-<footer id="main-footer">
-  <nav class="desktop-nav">
-    <div class="nav-left" style="color: #302119;">
-      <svg width="40px" height="40px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="#302119" fill-rule="evenodd">
-          <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000">
-            <g id="icons" transform="translate(56.000000, 160.000000)">
-              <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"></path>
-            </g>
-          </g>
-        </g>
-      </svg>
-      <p style="margin-left: 10px; margin-top: 5px">Coded by unibtw</p>
-    </div>
-    <div class="nav-right">
-      <a href="https://github.com/unibtw/LibraryManagement">Source Code</a>
-    </div>
-  </nav>
-</footer>
+
 </html>
