@@ -1,0 +1,34 @@
+{
+  "name": "librarymanagement",
+  "version": "1.0.0",
+  "description": "Library Management System API",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unibtw/LibraryManagement.git"
+  },
+  "author": "unibtw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unibtw/LibraryManagement/issues"
+  },
+  "homepage": "https://github.com/unibtw/LibraryManagement#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3"
+  },
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^7.0.0"
+  }
+}
