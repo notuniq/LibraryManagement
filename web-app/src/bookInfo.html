@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header id="main-header">
+    <nav class="desktop-nav">
+        <a class="nav-left" href="index.html">
+            <svg fill="#302119" height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.5 487.5" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M437,12.3C437,5.5,431.5,0,424.7,0H126.3C84.4,0,50.4,34.1,50.4,75.9v335.7c0,41.9,34.1,75.9,75.9,75.9h298.5
+                c6.8,0,12.3-5.5,12.3-12.3V139.6c0-6.8-5.5-12.3-12.3-12.3H126.3c-28.3,0-51.4-23.1-51.4-51.4S98,24.5,126.3,24.5h298.5
+                C431.5,24.5,437,19,437,12.3z M126.3,151.8h286.2V463H126.3c-28.3,0-51.4-23.1-51.4-51.4V131.7
+                C88.4,144.2,106.5,151.8,126.3,151.8z" />
+                        <path
+                            d="M130.5,64.8c-6.8,0-12.3,5.5-12.3,12.3s5.5,12.3,12.3,12.3h280.1c6.8,0,12.3-5.5,12.3-12.3s-5.5-12.3-12.3-12.3H130.5z" />
+                        <path d="M178,397.7c6.3,2.4,13.4-0.7,15.8-7.1l17.9-46.8h62.7c0.5,0,0.9-0.1,1.3-0.1l17.9,46.9c1.9,4.9,6.5,7.9,11.4,7.9
+                c1.5,0,2.9-0.3,4.4-0.8c6.3-2.4,9.5-9.5,7.1-15.8l-54-141.2c-3-7.9-10.4-13-18.8-13c-8.4,0-15.8,5.1-18.8,13l-54,141.2
+                C168.5,388.2,171.7,395.2,178,397.7z M243.7,260l22.7,59.3h-45.3L243.7,260z" />
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <div class="search-button">
+            <button type="button" id="FindBtn"><i class="fa fa-search"></i></button>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <div id="preloader2">
+        <div id="loader2" class="loader2"></div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close2">&times;</span>
+            <h2>Поиск книг</h2>
+            <form>
+                <label for="name2">Название</label>
+                <input type="text" id="name2" name="name2">
+                <label for="author2">Автор</label>
+                <input type="text" id="author2" name="author2">
+                <button type="button" id="findBook" class="button">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="book-cover">
+            <img src="https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7"
+                alt="Book Cover">
+        </div>
+        <div class="book-details">
+            <h1>Название книги</h1>
+            <p>Автор: Автор книги</p>
+            <p>Описание: Описание книги</p>
+            <p>Жанры: Жанр 1, Жанр 2, Жанр 3</p>
+        </div>
+    </div>
+
+    <script src="scripts/search.js"></script>
+    <script src="scripts/bookInfo.js"></script>
+</body>
+
+</html>

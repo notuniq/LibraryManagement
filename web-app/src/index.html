@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <title>Library Management App</title>
   <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <header id="main-header">
   <nav class="desktop-nav">
-    <div class="nav-left">
+    <a class="nav-left" href="index.html">
       <svg fill="#302119" height="40px" width="40px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.5 487.5" xml:space="preserve">
         <g>
@@ -27,10 +27,9 @@
           </g>
         </g>
       </svg>
-    </div>
+    </a>
     <div class="search-button">
-      <input type="text" placeholder="Поиск...">
-      <button type="submit">Найти</button>
+      <button type="button" id="FindBtn"><i class="fa fa-search"></i></button>
     </div>
   </nav>
 </header>
@@ -43,7 +42,7 @@
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>Что будем искать</h2>
+      <h2>Добавление книги</h2>
       <form>
         <label for="name" class="required">Название</label>
         <input type="text" id="name" name="name" required>
@@ -51,16 +50,60 @@
         <input type="text" id="author" name="author" required>
         <label for="avatar">Обложка</label>
         <input type="text" id="avatar" name="avatar">
-        <label for="genre" class="required">Жанр</label>
-        <select id="genre" name="genre" required>
+        <label for="description" class="required">Описание (максимум 150 символов)</label>
+        <textarea id="description" name="description" maxlength="150" rows="4" cols="50" required></textarea>
+        <label for="genre" class="required">Жанры</label>
+        <select id="genre" name="genre" required multiple>
           <option value="Фантастика">Фантастика</option>
+          <option value="Фэнтези">Фэнтези</option>
           <option value="Детектив">Детектив</option>
+          <option value="Триллер">Триллер</option>
+          <option value="Мистика">Мистика</option>
+          <option value="Ужасы">Ужасы</option>
+          <option value="Приключения">Приключения</option>
           <option value="Роман">Роман</option>
-          <!-- Добавьте здесь другие предложенные жанры -->
+          <option value="Драма">Драма</option>
+          <option value="Комедия">Комедия</option>
+          <option value="Поэзия">Поэзия</option>
+          <option value="Научная проза">Научная проза</option>
+          <option value="Философская проза">Философская проза</option>
+          <option value="Историческая проза">Историческая проза</option>
+          <option value="Фантастическая проза">Фантастическая проза</option>
+          <option value="Публицистика">Публицистика</option>
+          <option value="Документальная литература">Документальная литература</option>
+          <option value="Политическая литература">Политическая литература</option>
+          <option value="Научно-популярная литература">Научно-популярная литература</option>
+          <option value="Биография">Биография</option>
+          <option value="Автобиография">Автобиография</option>
+          <option value="Приключенческая литература">Приключенческая литература</option>
+          <option value="Детская литература">Детская литература</option>
+          <option value="Подростковая литература">Подростковая литература</option>
+          <option value="Религиозная литература">Религиозная литература</option>
+          <option value="Психологическая проза">Психологическая проза</option>
+          <option value="Фэнтези проза">Фэнтези проза</option>
+          <option value="Мистическая проза">Мистическая проза</option>
+          <option value="Эпическая фантастика">Эпическая фантастика</option>
+          <option value="Научная фантастика">Научная фантастика</option>
+          <option value="Космическая фантастика">Космическая фантастика</option>
         </select>
+
         <label for="genre2">Свой жанр</label>
         <input type="text" id="genre2" name="genre2">
-        <button type="button" id="addItem" class="button">Добавить книгу</button>
+        <button type="button" id="addItem" class="button">Добавить</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close2">&times;</span>
+      <h2>Поиск книг</h2>
+      <form>
+        <label for="name2">Название</label>
+        <input type="text" id="name2" name="name2">
+        <label for="author2">Автор</label>
+        <input type="text" id="author2" name="author2">
+        <button type="button" id="findBook" class="button">Добавить</button>
       </form>
     </div>
   </div>
@@ -124,6 +167,8 @@
   <!--    </nav>-->
   <!--  </footer>-->
   <script src="scripts/modal.js"></script>
+  <script src="scripts/search.js"></script>
+  <script src="scripts/addBook.js"></script>
 </body>
 
 </html>

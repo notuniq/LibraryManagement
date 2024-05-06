@@ -45,10 +45,11 @@ body {
     background-color: #302119;
     color: #ffffff;
     cursor: pointer;
+    transition: 1s ease-out;
 }
 
 .search-button button:hover {
-    background-color: #302119;
+    background-color: rgb(66, 48, 41);
 }
 
 /* Стили для прелоадера */
@@ -199,10 +200,11 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 1s ease-out;
 }
 
 .add-book-button:hover {
-    background-color: #302119;
+    background-color: rgb(66, 48, 41);
 }
 
 .no-books-message {
@@ -225,8 +227,6 @@ body {
     margin: 0;
 }
 
-
-
 .modal {
     display: none;
     position: fixed;
@@ -239,9 +239,11 @@ body {
 }
 
 .modal-content {
-    color: white;
-    background-color: rgb(35, 34, 34);
-    margin: 15% auto;
+    overflow-y: auto;
+    max-height: 80%;
+    color: #302119;
+    background-color: #f4f2ef;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #3b3b3b;
     width: 80%;
@@ -301,7 +303,8 @@ body {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.close {
+.close,
+.close2 {
     color: #aaa;
     text-align: left;
     font-size: 28px;
@@ -309,10 +312,12 @@ body {
 }
 
 .close:hover,
-.close:focus {
+.close:focus,
+.close2:hover,
+.close2:focus {
     text-decoration: none;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgb(101, 101, 101);
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -328,4 +333,64 @@ body {
 /* Стили для опций выпадающего списка */
 .modal-content select option {
     padding: 5px;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.book-cover {
+    margin-top: 100px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.book-cover img {
+    width: 100%;
+    height: auto;
+}
+
+.book-details {
+    flex: 2;
+    margin-top: 100px;
+}
+
+.book-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.book-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#preloader2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /* чтобы прелоадер был поверх всех элементов */
+}
+
+.loader2 {
+    border: 16px solid #f3f3f3;
+    /* серый */
+    border-top: 16px solid #3498db;
+    /* синий */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    /* анимация вращения */
 }

@@ -40,7 +40,7 @@ function displayBooks(books) {
         books.forEach(book => {
             const bookLink = document.createElement('a');
             bookLink.classList.add('book');
-            bookLink.href = `http://your-website.com/books/${book._id}`; // Ссылка на страницу книги
+            bookLink.href = `bookInfo.html?id=${book._id}`; // Ссылка на страницу книги
 
             const img = document.createElement('img');
 

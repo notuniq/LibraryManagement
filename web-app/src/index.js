@@ -23,6 +23,10 @@ const createWindow = () => {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+
+  mainWindow.webContents.on('bookInfo', () => {
+    mainWindow.loadFile(path.join(__dirname, 'bookInfo.html'));
+  });
 };
 
 // This method will be called when Electron has finished
