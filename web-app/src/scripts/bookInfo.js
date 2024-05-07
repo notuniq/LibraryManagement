@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         if (!response.ok) {
             alert('Ошибка!')
+            const delBtn = document.getElementById('delBook');
+            delBtn.style.display = 'none';
             window.location.href('index.html')
         }
         const bookData = await response.json();
@@ -33,4 +35,31 @@ document.addEventListener('DOMContentLoaded', async function () {
         // Скрытие прелоадера после загрузки информации о книге или в случае ошибки
         preloader.style.display = 'none';
     }
+});
+
+function delBook() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const bookId = urlParams.get('id');
+
+    fetch(`http://localhost:3000/api/books/info/${bookId}`, { method: 'DELETE' })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Ошибка сети');
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert('Книга успешно удалена!');
+            window.location.href = 'index.html';
+        })
+        .catch(error => {
+            alert('Ошибка при удалении книги: ' + error.message);
+            window.location.href = 'index.html';
+        });
+
+}
+
+const delBtn = document.getElementById('delBook');
+delBtn.addEventListener('click', () => {
+    delBook()
 });

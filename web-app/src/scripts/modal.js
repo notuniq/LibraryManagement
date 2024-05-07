@@ -1,6 +1,3 @@
-// Получаем кнопку "Добавить книгу"
-const addButton = document.getElementById('add-book-btn');
-
 // Получаем модальное окно
 const modal = document.getElementById('modal');
 
@@ -8,6 +5,7 @@ const modal = document.getElementById('modal');
 const closeButton = modal.querySelector('.close');
 
 // Добавляем обработчик события клика на кнопку "Добавить книгу"
+const addButton = document.getElementById('add-book-btn');
 addButton.addEventListener('click', () => {
     // Открываем модальное окно
 
