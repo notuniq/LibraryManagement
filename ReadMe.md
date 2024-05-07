@@ -18,7 +18,7 @@
 2. Настройте порт / домен для всех запросов (Для поиска введите http://localhost:3000)
 3. Соберите приложения с помощью команды:
 ```
-   npm run make -- --platform=win32 for Windows
+   npm run make -- --platform=win32 # for Windows
    npm run make -- --platform=darwin # for MacOS
    npm run make -- --platform=linux # for Linux
 ```
