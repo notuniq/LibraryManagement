@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 // Подключаем роутеры для маршрутизации запросов
 const bookRoutes = require('./routes/bookRoutes');
+const path = require('path');
 
 // Создаем экземпляр приложения Express
 const app = express();
@@ -14,6 +15,8 @@ app.use(express.json());
 require('./config/db');
 // Регистрируем роутеры для обработки запросов, начинающихся с '/api'
 app.use('/api', bookRoutes);
+
+app.use('/api/nofound', express.static(path.join(__dirname, 'assets/noFound.jpg')));
 
 // Определяем порт, на котором будет работать сервер
 const PORT = process.env.PORT || 3000;

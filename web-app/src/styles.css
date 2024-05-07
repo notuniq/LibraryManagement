@@ -93,7 +93,8 @@ body {
 }
 
 
-#books-list {
+#books-list,
+#books-list2 {
     margin: auto 0;
     width: 100%;
     /* Задаем ширину контейнера */
@@ -108,7 +109,8 @@ body {
 }
 
 
-#books-list::-webkit-scrollbar {
+#books-list::-webkit-scrollbar,
+#books-list2::-webkit-scrollbar {
     display: none;
     /* Скрываем полосу прокрутки вебкит-браузеров */
 }

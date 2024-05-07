@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.ok) {
                 alert('Книга успешно добавлена!');
                 location.reload();
-                // Здесь можно добавить дополнительную логику, например, очистить поля формы
             } else {
                 throw new Error('Ошибка при добавлении книги');
             }

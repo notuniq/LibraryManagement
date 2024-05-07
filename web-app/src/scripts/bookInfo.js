@@ -14,14 +14,19 @@ document.addEventListener('DOMContentLoaded', async function () {
     try {
         // Отправляем запрос на сервер для получения информации о книге
         const response = await fetch(`http://localhost:3000/api/books/info/${bookId}`);
+
+        if (!response.ok) {
+            alert('Ошибка!')
+            window.location.href('index.html')
+        }
         const bookData = await response.json();
 
-        // Заполняем данные о книге
-        bookCover.src = bookData.avatar ? bookData.avatar : 'https://assets-ru.bookmate.yandex.net/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7';
+        bookCover.src = bookData.avatar ? bookData.avatar : 'http://localhost:3000/api/nofound';
         bookTitle.textContent = bookData.title;
         bookAuthor.textContent = `Автор: ${bookData.author}`;
         bookDescription.textContent = `Описание: ${bookData.description}`;
         bookGenres.textContent = `Жанры: ${bookData.genre.join(', ')}`;
+
     } catch (error) {
         console.error('Error fetching book data:', error);
     } finally {

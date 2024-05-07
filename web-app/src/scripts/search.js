@@ -12,16 +12,16 @@ searchButton.addEventListener('click', () => {
     modal2.style.display = 'block';
 });
 
+closeButton2.addEventListener('click', () => {
+    modal2.style.display = 'none';
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Получаем элементы DOM
     const findButton = document.getElementById('findBook');
     const nameInput2 = document.getElementById('name2');
     const authorInput2 = document.getElementById('author2');
-
-    // Добавляем обработчик события клика на кнопку закрытия модального окна
-    closeButton2.addEventListener('click', () => {
-        modal2.style.display = 'none';
-    });
 
     // Добавляем обработчик события клика на кнопку "Добавить"
     findButton.addEventListener('click', () => {
@@ -61,8 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (data.length === 0) {
                     alert('Ничего не найдено.');
                 } else {
-                    // Обрабатываем ответ от сервера
-                    console.log(data);
+                    const queryParams = new URLSearchParams();
+                    queryParams.append('books', JSON.stringify(data)); // Преобразуем объект data в строку JSON и добавляем его к параметрам запроса
+                    window.location.href = `searchPage.html?${queryParams.toString()}`; // Перенаправляем на страницу с параметрами запроса
                 }
             })
             .catch(error => {
@@ -70,3 +71,52 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 });
+
+
+function hideLoader() {
+    const preloader = document.getElementById('preloader2');
+    preloader.style.display = 'none';
+}
+
+// Функция для отображения книг или сообщения "Нет книг"
+function displayBooks(books) {
+    const booksList = document.getElementById('books-list2');
+    const noBooks = document.getElementById('no-books2')
+    if (books.length === 0) {
+        // Если нет книг, добавляем сообщение "Нет книг"
+        noBooks.style.opacity = '1';
+    } else {
+        noBooks.remove();
+        // Если книги есть, отображаем каждую книгу
+        books.forEach(book => {
+            const bookLink = document.createElement('a');
+            bookLink.classList.add('book');
+            bookLink.href = `bookInfo.html?id=${book._id}`; // Ссылка на страницу книги
+
+            const img = document.createElement('img');
+
+            img.src = book.avatar ? book.avatar : 'http://localhost:3000/api/nofound';
+            img.alt = book.title;
+            img.width = 177;
+            img.height = 247;
+
+            const author = document.createElement('p');
+            author.classList.add('book-author');
+            author.textContent = book.author;
+
+            const title = document.createElement('p');
+            title.classList.add('book-title');
+            title.textContent = book.title;
+
+            bookLink.appendChild(img);
+            bookLink.appendChild(author);
+            bookLink.appendChild(title);
+
+            booksList.appendChild(bookLink);
+        });
+
+    }
+
+    // После отображения книг скрываем прелоадер
+    hideLoader();
+}

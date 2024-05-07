@@ -44,7 +44,7 @@ function displayBooks(books) {
 
             const img = document.createElement('img');
 
-            img.src = book.avatar ? book.avatar : 'https://api.bookmate.ru/assets/books-covers/59/52/FdBVjHXn-ipad.jpeg?image_hash=ce059c793a68f7bdbd64a5928e7f72a7';
+            img.src = book.avatar ? book.avatar : 'http://localhost:3000/api/nofound';
             img.alt = book.title;
             img.width = 177;
             img.height = 247;
