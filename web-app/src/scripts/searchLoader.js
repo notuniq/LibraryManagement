@@ -3,9 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const noBooks = document.getElementById('no-books2');
     const preloader = document.getElementById('preloader2');
 
-    // Показываем прелоадер перед загрузкой книг
-    preloader.style.display = 'block';
-
     // Получаем параметры запроса из URL
     const urlParams = new URLSearchParams(window.location.search);
     const booksDataString = urlParams.get('books');

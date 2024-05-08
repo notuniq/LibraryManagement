@@ -411,3 +411,29 @@ button:hover {
     animation: spin 2s linear infinite;
     /* анимация вращения */
 }
+
+.genres-container {
+    overflow-x: auto;
+    /* Включаем горизонтальную прокрутку */
+    white-space: nowrap;
+    /* Предотвращаем перенос строк */
+}
+
+.genres {
+    display: inline-block;
+    /* Делаем контейнер жанров блочным элементом */
+}
+
+.genre-button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #302119;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
